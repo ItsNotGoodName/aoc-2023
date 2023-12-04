@@ -2,17 +2,13 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"strconv"
-	"strings"
+
+	"github.com/ItsNotGoodName/aoc-2023"
 )
 
 func main() {
-	raw, err := os.ReadFile("input.txt")
-	if err != nil {
-		panic(err)
-	}
-	lines := strings.Split(strings.TrimSpace(string(raw)), "\n")
+	lines := aoc.Read()
 
 	var sum int
 
@@ -41,4 +37,3 @@ func main() {
 
 	fmt.Println(sum)
 }
-
